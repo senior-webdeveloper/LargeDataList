@@ -67,8 +67,8 @@ const App = () => {
   });
   const [filters, setFilters] = useState({});
   const [direction, setDirection] = useState(null);
-  const [rows, setRows] = useState(pets);
-  const [filteredRows, setFilteredRows] = useState(pets);
+  const [rows, setRows] = useState(pets.slice(0, 20));
+  const [filteredRows, setFilteredRows] = useState(pets.slice(0, 20));
 
   const sortTable = column => {
     const newDirection = direction === 'desc' ? 'asc' : 'desc';
@@ -244,101 +244,6 @@ const App = () => {
                     );
                   }
                 })}
-                {/* <TableBody
-                  rowKey={item['S.No']}
-                  columnValue={item['S.No']}
-                  columnName="S.No"
-                />
-                <TableBody
-                  rowKey={item['S.No']}
-                  columnValue={item['Account ID']}
-                  columnName="Account ID"
-                />
-                <TableBody
-                  rowKey={item['S.No']}
-                  columnValue={item['Account Name']}
-                  columnName="Account Name"
-                />
-                <TableBody
-                  rowKey={item['S.No']}
-                  columnValue={item['Account Type']}
-                  columnName="Account Type"
-                />
-                <TableBody
-                  rowKey={item['S.No']}
-                  columnValue={item['Specialty 1']}
-                  columnName="Specialty 1"
-                />
-                <TableBody
-                  rowKey={item['S.No']}
-                  columnValue={item['Province']}
-                  columnName="Province"
-                />
-                <TableBody
-                  rowKey={item['S.No']}
-                  columnValue={item['Parent Account Id']}
-                  columnName="Parent Account Id"
-                />
-                <TableBody
-                  rowKey={item['S.No']}
-                  columnValue={item['Parent Account Name']}
-                  columnName="Parent Account Name"
-                />
-                <TableBody
-                  rowKey={item['S.No']}
-                  columnValue={item['PSR Id']}
-                  columnName="PSR Id"
-                />
-                <TableBody
-                  rowKey={item['S.No']}
-                  columnValue={item['PSR Name']}
-                  columnName="PSR Name"
-                />
-                <TableBody
-                  rowKey={item['S.No']}
-                  columnValue={item['FLSM Id']}
-                  columnName="FLSM Id"
-                />
-                <TableBody
-                  rowKey={item['S.No']}
-                  columnValue={item['FLSM Name']}
-                  columnName="FLSM Name"
-                />
-                <TableBody
-                  rowKey={item['S.No']}
-                  columnValue={item['NSM Id']}
-                  columnName="NSM Id"
-                />
-                <TableBody
-                  rowKey={item['S.No']}
-                  columnValue={item['NSM Name']}
-                  columnName="NSM Name"
-                />
-                <TableBody
-                  rowKey={item['S.No']}
-                  columnValue={
-                    item['Q1: How many diagnosed OP patients per month?']
-                  }
-                  columnName="Q1: How many diagnosed OP patients per month?"
-                />
-                <TableBody
-                  rowKey={item['S.No']}
-                  columnValue={
-                    item[
-                      'Q2:How many patients are treated for OP on an average per month?'
-                    ]
-                  }
-                  columnName="Q2:How many patients are treated for OP on an average per month?"
-                />
-                <TableBody
-                  rowKey={item['S.No']}
-                  columnValue={
-                    item[
-                      'Q3:What percentage treated of your OP-treated patients are currently being prescribed Drug A?'
-                    ]
-                  }
-                  columnName="Q3:What percentage treated of your OP-treated patients are currently being prescribed Drug A?"
-                /> */}
               </View>
             );
           }}
